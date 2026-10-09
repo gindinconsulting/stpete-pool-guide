@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pool Tables in St. Petersburg, FL — Ranked by Walkability, Then Table Quality</title>
+<meta name="description" content="A ranked, locally-sourced guide to pool tables in St. Petersburg, Florida: downtown walkable spots, the cheap real-pool dives on 9th Street, late-night options, and the tournament-grade 9-footers worth the drive.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pool Tables in St. Petersburg — Ranked by Walkability, Then Table Quality">
+<meta property="og:description" content="Downtown walkable rooms, the 50¢-a-game dive on 9th Street, late-night Central Ave, and the 9-foot halls worth the 20-minute drive.">
+<meta property="og:url" content="https://gindinconsulting.github.io/stpete-pool-guide/">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --felt:#1f7a5c;
+    --felt-bright:#2fa87c;
+    --ink:#15201c;
+    --paper:#f7f5ef;
+    --card:#ffffff;
+    --muted:#5d6b65;
+    --line:#e2ded3;
+    --ball:#d94f30;
+    --gold:#c99a2e;
+    --shadow:0 1px 2px rgba(21,32,28,.06),0 8px 24px rgba(21,32,28,.05);
+    --radius:14px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --felt:#2fa87c;
+      --felt-bright:#4fd0a0;
+      --ink:#e8ece9;
+      --paper:#12181a;
+      --card:#1a2225;
+      --muted:#9aa8a2;
+      --line:#2a3538;
+      --ball:#e8663f;
+      --gold:#dbb154;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:0 1rem 4rem;
+  }
+  .wrap{max-width:46rem;margin:0 auto}
+  header.site{padding:2.5rem 0 1.5rem;border-bottom:2px solid var(--felt)}
+  .kicker{
+    display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:700;color:var(--felt-bright);margin-bottom:.6rem;
+  }
+  h1{font-size:clamp(1.7rem,5vw,2.4rem);line-height:1.15;margin:0 0 .6rem;letter-spacing:-.02em}
+  .lede{color:var(--muted);margin:0;font-size:1.02rem}
+  .criterion{
+    margin-top:1.1rem;padding:.85rem 1rem;background:var(--card);border:1px solid var(--line);
+    border-left:4px solid var(--gold);border-radius:8px;font-size:.92rem;color:var(--muted);box-shadow:var(--shadow);
+  }
+  .criterion b{color:var(--ink)}
+  nav.jump{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.4rem}
+  nav.jump a{
+    font-size:.82rem;text-decoration:none;padding:.42rem .8rem;border-radius:999px;
+    background:var(--card);border:1px solid var(--line);color:var(--ink);font-weight:600;
+  }
+  nav.jump a:hover{border-color:var(--felt);color:var(--felt-bright)}
+  h2.tier{
+    font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+    margin:2.6rem 0 .9rem;padding-bottom:.5rem;border-bottom:1px solid var(--line);font-weight:700;
+  }
+  h2.tier span{display:block;font-size:.95rem;letter-spacing:0;text-transform:none;font-weight:500;margin-top:.35rem;color:var(--ink)}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.15rem 1.2rem;margin-bottom:1rem;box-shadow:var(--shadow);position:relative;
+  }
+  .head{display:flex;align-items:flex-start;gap:.8rem;flex-wrap:wrap}
+  .rank{
+    flex:0 0 auto;width:2rem;height:2rem;border-radius:50%;background:var(--felt);color:#fff;
+    display:grid;place-items:center;font-weight:800;font-size:.95rem;margin-top:.1rem;
+  }
+  .card.alt .rank{background:var(--gold)}
+  .card.casual .rank{background:var(--muted)}
+  .title{flex:1 1 14rem;min-width:0}
+  .title h3{margin:0;font-size:1.16rem;letter-spacing:-.01em}
+  .addr{font-size:.86rem;color:var(--muted);margin-top:.15rem}
+  .tags{display:flex;flex-wrap:wrap;gap:.35rem;margin:.85rem 0 0}
+  .tag{
+    font-size:.72rem;font-weight:700;letter-spacing:.02em;padding:.24rem .55rem;border-radius:6px;
+    background:color-mix(in srgb,var(--felt) 12%,transparent);color:var(--felt-bright);
+    border:1px solid color-mix(in srgb,var(--felt) 30%,transparent);
+  }
+  .tag.warn{background:color-mix(in srgb,var(--ball) 12%,transparent);color:var(--ball);border-color:color-mix(in srgb,var(--ball) 32%,transparent)}
+  .tag.star{background:color-mix(in srgb,var(--gold) 15%,transparent);color:var(--gold);border-color:color-mix(in srgb,var(--gold) 34%,transparent)}
+  .card p{margin:.75rem 0 0;font-size:.95rem}
+  .card p.quote{font-style:italic;color:var(--muted)}
+  .kv{margin:.8rem 0 0;padding:.7rem .85rem;background:color-mix(in srgb,var(--felt) 7%,transparent);border-radius:8px;font-size:.92rem}
+  .kv b{color:var(--felt-bright)}
+  .note{margin:.8rem 0 0;padding:.7rem .85rem;border-left:3px solid var(--ball);background:color-mix(in srgb,var(--ball) 7%,transparent);border-radius:0 8px 8px 0;font-size:.9rem}
+  .src{margin-top:.9rem;font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.15rem .8rem}
+  .src a{color:var(--felt-bright);text-decoration:none;border-bottom:1px dotted currentColor}
+  .src a:hover{border-bottom-style:solid}
+  ul.mini{margin:.9rem 0 0;padding-left:1.1rem;font-size:.94rem}
+  ul.mini li{margin-bottom:.55rem}
+  ul.mini li:last-child{margin-bottom:0}
+  .verdict{
+    background:var(--card);border:2px solid var(--felt);border-radius:var(--radius);
+    padding:1.2rem;margin-top:2.4rem;box-shadow:var(--shadow);
+  }
+  .verdict h2{margin:0 0 .7rem;font-size:1.15rem}
+  .picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.6rem;margin:0;padding:0;list-style:none}
+  .picks li{padding:.7rem .8rem;border:1px solid var(--line);border-radius:9px;font-size:.9rem;background:color-mix(in srgb,var(--felt) 5%,transparent)}
+  .picks li b{display:block;margin-top:.15rem;font-size:.98rem}
+  .caveats{margin-top:2rem;padding:1.1rem 1.2rem;border:1px dashed var(--ball);border-radius:var(--radius);font-size:.92rem}
+  .caveats h2{margin:0 0 .6rem;font-size:.95rem;color:var(--ball);letter-spacing:.04em;text-transform:uppercase}
+  .caveats p{margin:.5rem 0 0}
+  footer.site{margin-top:2.6rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}
+  footer.site a{color:var(--muted)}
+  @media print{
+    body{background:#fff;color:#000}
+    nav.jump,.card:hover{display:none}
+    .card,.verdict,.caveats{break-inside:avoid;box-shadow:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <span class="kicker">Saint Pete · Billiards</span>
+  <h1>Pool Tables in St. Petersburg</h1>
+  <p class="lede">Ranked by proximity-to-downtown first, then table quality.</p>
+  <div class="criterion">Because downtown St. Pete has <b>bars with pool tables</b>, not real billiard clubs. The order of this list is the honest shape of the problem: walkability buys you atmosphere and a dinner menu; it does not buy you a level 9-footer.</div>
+  <nav class="jump" aria-label="Jump to section">
+    <a href="#downtown">Downtown (walkable)</a>
+    <a href="#mile">One mile out</a>
+    <a href="#drive">Worth the drive</a>
+    <a href="#casual">Fun-but-casual</a>
+    <a href="#verdict">Bottom line</a>
+  </nav>
+</header>
+
+<h2 class="tier" id="downtown">Downtown — walkable<span>Pleasant, fed, and a short walk. Tables are bar-grade.</span></h2>
+
+<article class="card">
+  <div class="head">
+    <div class="rank">1</div>
+    <div class="title">
+      <h3>The Lure</h3>
+      <div class="addr">661 Central Ave · dead center downtown</div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag star">Closest decent room</span><span class="tag">Sushi / tapas / beer</span><span class="tag">11am–10/11pm</span><span class="tag warn">Bar-grade tables</span></div>
+  <p>Closest decent room with tables, dead center downtown. A couple of tables, pool-hall category on Yelp, sushi/tapas/beer, low pressure — the local line is <em>“a couple tables and it’s pretty low pressure.”</em></p>
+  <p class="quote">Tradeoff: bar-grade tables, and it’s a food-and-drinks venue first.</p>
+  <div class="src"><span>Sources:</span><a href="https://www.yelp.com/biz/the-lure-saint-petersburg" rel="noopener">Yelp</a><a href="https://www.reddit.com/r/StPetersburgFL/comments/1pquv55/bars_or_spots_in_st_pete_with_pool_tables/" rel="noopener">Reddit · r/StPetersburgFL</a></div>
+</article>
+
+<article class="card">
+  <div class="head">
+    <div class="rank">2</div>
+    <div class="title">
+      <h3>There Goes The Neighborhood</h3>
+      <div class="addr">129 1st Ave N · across from Tequila Daisy</div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag star">Pro-perfect location</span><span class="tag">Pool · darts · Golden Tee</span><span class="tag">Food</span><span class="tag warn">Call ahead re: tables</span></div>
+  <p>Pro-perfect downtown location with pool tables, dart boards, a Golden Tee, and food. Locals call it low-key even on weekends.</p>
+  <div class="kv"><b>Quirk:</b> it’s a locals’ bar — a $25/yr membership gets 25% off food and drinks.</div>
+  <div class="note"><b>Call ahead on the tables.</b> The recent mention was past tense and this spot’s lineup shifts.</div>
+  <div class="src"><span>Sources:</span><a href="https://stpeterising.com/home/longtime-st-pete-restaurant-partners-to-open-downtown-locals-neighborhood-bar-embracing-citys-past" rel="noopener">St Pete Rising</a><a href="https://ilovetheburg.com/new-bars-open-st-pete/" rel="noopener">ILOVETHEBURG</a></div>
+</article>
+
+<article class="card">
+  <div class="head">
+    <div class="rank">3</div>
+    <div class="title">
+      <h3>Enigma Bar &amp; Lounge</h3>
+      <div class="addr">1110 Central Ave · EDGE district, ~½ mi north</div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag star">Open till 3am, 7 days</span><span class="tag">2 tables + darts</span><span class="tag">2-for-1 HH 1–9pm</span><span class="tag">LGBTQ+ friendly</span><span class="tag">Non-smoking + patio</span></div>
+  <p>Two pool tables plus a dart board, and it’s the only downtown-corridor option open until <b>3am</b>, seven days, with 2-for-1 happy hour 1–9pm. LGBTQ+ friendly lounge, DJs, drag shows, non-smoking interior plus patio.</p>
+  <p><b>Pick this for late night.</b></p>
+  <div class="src"><span>Sources:</span><a href="https://www.yelp.com/biz/enigma-bar-and-lounge-st-petersburg" rel="noopener">Yelp</a><a href="https://edgedistrict.org/business/enigma/" rel="noopener">EDGE District</a></div>
+</article>
+
+<h2 class="tier" id="mile">One mile out — where the real pool culture is<span>Cheap felt, regulars, leagues. This is the actual answer.</span></h2>
+
+<article class="card">
+  <div class="head">
+    <div class="rank">4</div>
+    <div class="title">
+      <h3>Flamingo Sports Bar</h3>
+      <div class="addr">1230 9th St N (MLK Jr St N)</div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag star">Best pool value</span><span class="tag star">50¢ a game</span><span class="tag">Free Wednesdays</span><span class="tag">Sunday tournaments 7:30pm</span><span class="tag">League table for rent</span></div>
+  <p>The honest answer for best pool <em>value</em> near downtown: <b>50¢ a game, free on Wednesdays, tournaments every Sunday at 7:30pm</b>, and a league table you can rent. A 55-year-old dive with a serious regulars’ scene (reportedly a Kerouac haunt).</p>
+  <p class="quote">No gloss, all felt.</p>
+  <div class="src"><span>Sources:</span><a href="https://ilovetheburg.com/flamingo-sports-bar-st-pete/" rel="noopener">ILOVETHEBURG</a><a href="https://www.cltampa.com/food-drink/jack-kerouacs-favorite-st-pete-bar-celebrates-55th-anniversary-this-month-18317956/" rel="noopener">Creative Loafing</a><a href="https://www.reddit.com/r/StPetersburgFL/comments/1fbbsrn/best_pool_tables_english_pubs_for_newly_relocated/" rel="noopener">Reddit</a></div>
+</article>
+
+<article class="card">
+  <div class="head">
+    <div class="rank">5</div>
+    <div class="title">
+      <h3>JWags</h3>
+      <div class="addr">2312 4th St N · midtown</div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag">Several tables</span><span class="tag">Darts</span><span class="tag">Patio</span><span class="tag">TVs</span><span class="tag">Cheap drinks</span></div>
+  <p>Several tables, darts, patio, TVs, cheap drinks. The reliable midtown sports-bar pick if you want more than one table without driving.</p>
+  <div class="src"><span>Sources:</span><a href="https://www.yelp.com/biz/jwags-st-petersburg-2" rel="noopener">Yelp</a></div>
+</article>
+
+<h2 class="tier" id="drive">If you actually care about the table<span>Worth the 15–20 minute drive. These are halls, not bars.</span></h2>
+
+<article class="card alt">
+  <div class="head">
+    <div class="rank">6</div>
+    <div class="title">
+      <h3>Long Stroke Billiards</h3>
+      <div class="addr">4200 62nd Ave N, Ste L · Pinellas Park</div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag star">Dedicated hall</span><span class="tag">Hourly or pay-for-play</span><span class="tag">Rarely a wait</span></div>
+  <p>A dedicated hall, not a bar with a table: hourly rental or pay-for-play, lots of tables so you rarely wait even at peak.</p>
+  <div class="src"><span>Sources:</span><a href="https://longstrokebilliards.com/" rel="noopener">longstrokebilliards.com</a><a href="https://forums.azbilliards.com/threads/longstroke-billiards-in-st-pete-fla-area.528350/" rel="noopener">AzBilliards forum</a></div>
+</article>
+
+<article class="card alt">
+  <div class="head">
+    <div class="rank">7</div>
+    <div class="title">
+      <h3>Stix Billiards</h3>
+      <div class="addr">Bay Pines</div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag star">Best-condition tables</span><span class="tag star">9′ Diamonds</span><span class="tag">Cold A/C</span><span class="tag">Reasonable prices</span></div>
+  <p>Best-condition tables in the area — <em>“freshly recovered 9′ Diamonds, cold A/C, reasonable prices.”</em> The one to drive for if you want true 9-foot play.</p>
+  <div class="src"><span>Sources:</span><a href="https://www.chalkysticks.com/places/stix-billiards-bay-pines" rel="noopener">ChalkySticks</a></div>
+</article>
+
+<h2 class="tier" id="casual">Fun-but-casual tier<span>Go for the room, not the roll.</span></h2>
+
+<article class="card casual">
+  <div class="head">
+    <div class="rank">·</div>
+    <div class="title">
+      <h3>Right Around the Corner Arcade Bar</h3>
+      <div class="addr">2244 Central Ave</div>
+    </div>
+  </div>
+  <ul class="mini"><li>7-ft pool table, pinball, N64, skee-ball, dog-friendly patio.</li><li>Go for the arcade, not the pool.</li></ul>
+</article>
+
+<article class="card casual">
+  <div class="head">
+    <div class="rank">·</div>
+    <div class="title">
+      <h3>The Potion Portal</h3>
+      <div class="addr">2329 28th St N</div>
+    </div>
+  </div>
+  <ul class="mini"><li>Barcade with a pool table and free validated parking.</li></ul>
+</article>
+
+<article class="card casual">
+  <div class="head">
+    <div class="rank">·</div>
+    <div class="title">
+      <h3>The Kenwood</h3>
+      <div class="addr">1721 28th St N</div>
+    </div>
+  </div>
+  <ul class="mini"><li>Recently remodeled dive: pool, darts, big backyard, karaoke Fridays 9pm.</li></ul>
+</article>
+
+<div class="verdict" id="verdict">
+  <h2>Bottom line</h2>
+  <ul class="picks">
+    <li>Walkable and pleasant<b>The Lure</b></li>
+    <li>Cheap, authentic, real players<b>Flamingo on 9th</b></li>
+    <li>Late night<b>Enigma</b></li>
+    <li>Tournament-grade 9-footers<b>Stix</b> or <b>Long Stroke</b></li>
+  </ul>
+</div>
+
+<div class="caveats">
+  <h2>Two caveats</h2>
+  <p>Several aggregator lists here (Atly / Yelp / ChalkySticks) are auto-generated and mix in Clearwater, Largo, and Tampa spots — <b>The Corner Pocket</b> and <b>Crooked Cue</b> are <em>not</em> St. Pete, and <b>Brewlands</b> is Tampa.</p>
+  <p>And anything described as a “pool table” in a restaurant is usually a <b>7-footer</b>, which matters if you’re a serious shooter.</p>
+</div>
+
+<footer class="site">
+  <p>Compiled from Yelp, Reddit (r/StPetersburgFL), ILOVETHEBURG, St Pete Rising, Creative Loafing, EDGE District, AzBilliards and ChalkySticks listings. Hours, prices and table lineups change — phone ahead before you go out. Published as a static page; corrections welcome.</p>
+</footer>
+
+</div>
+</body>
+</html>
